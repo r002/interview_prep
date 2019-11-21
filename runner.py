@@ -1,6 +1,7 @@
 from arrays.q001 import *
 from arrays.q002 import *
 from algos.q101 import *
+from algos.q102 import *
 # import arrays.q02 as aq02
 
 def invoke_exit():
@@ -10,12 +11,14 @@ def invoke_exit():
 options = { 1 : Arr001,
             2 : Arr002,
             101 : Algo101,
+            102 : Algo102,
             0 : invoke_exit
 }
 
 d = { "Arr001_desc" : Arr001.description,
       "Arr002_desc" : Arr002.description,
-      "Algo101_desc" : Algo101.description
+      "Algo101_desc" : Algo101.description,
+      "Algo102_desc" : Algo102.description
 }
 
 # Present an options menu to solicit the user's input
@@ -34,6 +37,7 @@ Array Questions:
 
 Algo Questions:
 {Algo101_desc}
+{Algo102_desc}
 
 0) Exit
 
