@@ -18,3 +18,12 @@ aq = qaq.ArrayQuestions
 reload(qaq)
 aq = qaq.ArrayQuestions  # Reassign the alias to refresh the reference
 ```
+
+## Notes
+### Arrays
+Question 1) No notes
+
+Question 2) list.sort() in Python naturally sorts in ascending order.
+
+### Algorithms
+Question 1) Print the first ten numbers in the Fibonocci Sequence.

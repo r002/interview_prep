@@ -2,7 +2,7 @@ from base.question import *
 
 class Arr001(Question):
 
-    description = "1) Find the average of the median of two sorted arrays."
+    description = "1) Find the mean of the medians of two sorted arrays."
 
     def __init__(self):
         arr1 = [1, 3, 5, 7]
