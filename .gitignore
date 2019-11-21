@@ -1,0 +1,3 @@
+# Ignore all intermediary Python compilations and objects
+*.pyc
+*.pyo
