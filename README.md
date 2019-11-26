@@ -21,11 +21,16 @@ aq = qaq.ArrayQuestions  # Reassign the alias to refresh the reference
 
 ## Notes
 ### Arrays
-1) No notes
+001) No notes.
 
-2) list.sort() in Python naturally sorts in ascending order.
+002) list.sort() in Python naturally sorts in ascending order.
 
 ### Algorithms
 101) Print the first ten numbers in the Fibonocci Sequence.
 
-102) Given a string, find the length of the longest substring without repeating characters.
+
+### Strings
+201) Given a string, s, find the longest palindromic substring in s.
+Eg. s = "tracecars" # racecar
+
+202) Given a string, find the length of the longest substring without repeating characters.

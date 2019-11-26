@@ -1,8 +1,8 @@
 from base.question import *
 
-class Algo102(Question):
+class Str202(Question):
 
-    description = "102) Given a string, find the length of the longest substring without repeating characters."
+    description = "202) Given a string, find the length of the longest substring without repeating characters."
 
     def __init__(self):
         s = 'abrkaabcdefghijjxxx'
