@@ -3,6 +3,7 @@ from arrays.q002 import *
 from algos.q101 import *
 from strings.q201 import *
 from strings.q202 import *
+from strings.q203 import *
 # import arrays.q02 as aq02
 
 def invoke_exit():
@@ -14,6 +15,7 @@ options = { 1 : Arr001,
             101 : Algo101,
             201 : Str201,
             202 : Str202,
+            203 : Str203,
             0 : invoke_exit
 }
 
@@ -21,7 +23,8 @@ d = { "Arr001_desc" : Arr001.description,
       "Arr002_desc" : Arr002.description,
       "Algo101_desc" : Algo101.description,
       "Str201_desc" : Str201.description,
-      "Str202_desc" : Str202.description
+      "Str202_desc" : Str202.description,
+      "Str203_desc" : Str203.description
 }
 
 # Present an options menu to solicit the user's input
@@ -44,6 +47,7 @@ Algo Questions:
 String Questions:
 {Str201_desc}
 {Str202_desc}
+{Str203_desc}
 
 0) Exit
 

@@ -1,6 +1,6 @@
 # interview_prep
 Holds all code in my quest to prepare for technical coding interviews. Cue training montage!
-Questions are from https://www.byte-by-byte.com/blog/
+Questions are from https://www.byte-by-byte.com/blog/ and Daily Interview Pro emails.
 
 
 ## Runner
@@ -34,3 +34,5 @@ aq = qaq.ArrayQuestions  # Reassign the alias to refresh the reference
 Eg. s = "tracecars" # racecar
 
 202) Given a string, find the length of the longest substring without repeating characters.
+
+203) Validate Balanced Parentheses.

@@ -3,11 +3,7 @@ from base.question import *
 class Str201(Question):
 
     description = "201) Given a string, s, find the longest palindromic substring in s."
-
-    ## Psudeocode
-    ## Say, s = 'tracecars'
-
-    i = 0
+    i = 0  # Number of iterations my solution takes
 
     def __init__(self):
         # s = 'racecar'
