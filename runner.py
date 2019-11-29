@@ -3,6 +3,7 @@ from arrays.q002 import *
 from arrays.q003 import *
 from arrays.q004 import *
 from algos.q101 import *
+from algos.q102 import *
 from strings.q201 import *
 from strings.q202 import *
 from strings.q203 import *
@@ -17,6 +18,7 @@ options = { 1 : Arr001,
             3 : Arr003,
             4 : Arr004,
             101 : Algo101,
+            102 : Algo102,
             201 : Str201,
             202 : Str202,
             203 : Str203,
@@ -28,6 +30,7 @@ d = { "Arr001_desc" : Arr001.description,
       "Arr003_desc" : Arr003.description,
       "Arr004_desc" : Arr004.description,
       "Algo101_desc" : Algo101.description,
+      "Algo102_desc" : Algo102.description,
       "Str201_desc" : Str201.description,
       "Str202_desc" : Str202.description,
       "Str203_desc" : Str203.description
@@ -51,6 +54,7 @@ Array Questions:
 
 Algo Questions:
 {Algo101_desc}
+{Algo102_desc}
 
 String Questions:
 {Str201_desc}

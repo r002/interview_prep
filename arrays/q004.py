@@ -7,16 +7,48 @@ class Arr004(Question):
     def __init__(self):
         # numbers = [3, 3, 2, 1, 3, 2, 1]
         # numbers = [1, 2, 3, 3, 2, 1, 3, 2, 1]
-        numbers = [2, 1, 3, 3, 2, 1, 3, 2, 1]
-        # numbers = [1, 3, 3, 1, 3, 2, 1]
+        # numbers = [2, 1, 3, 3, 2, 1, 3, 2, 1]
+        numbers = [2, 1, 3, 3, 1, 3, 2, 1]
+        # numbers = [1, 1, 1, 1, 1, 1, 1, 1, 1]
 
         print(f"\nOriginal: {numbers}\n")
         # rs = self.sort_numbers(numbers)
-        rs = self.sort_in_constant_space(numbers)
+        rs = self.sort_in_n_space2(numbers)
         print(f"\nSorted: {rs}")
 
 
-    def sort_in_constant_space(self, numbers):
+    # This is not constant space because RS grows as a function of n.
+    # To implement a constant space solution, you need to sort in-place
+    # in the original array.
+    def sort_in_n_space2(self, numbers):
+        rs = [None] * len(numbers)
+        pos_1 = 0
+        pos_2 = 0
+        pos_3 = len(numbers)-1
+        for i in range(len(numbers)):
+            if 1 == numbers[i]:
+                print("Inserting: 1")
+                if rs[pos_1] is not None:
+                    print(f"\tPos{pos_1} occupied by {rs[pos_1]}. Shift to pos{pos_2}!")
+                    rs[pos_2] = 2
+                rs[pos_1] = 1
+                pos_1 += 1
+                pos_2 += 1
+            elif 2 == numbers[i]:
+                print("Inserting: 2")
+                rs[pos_2] = 2
+                pos_2 += 1
+            elif 3 ==numbers[i]:
+                print("Inserting: 3")
+                rs[pos_3] = 3
+                pos_3 -= 1
+            print(f"RS after iteration {i+1}: {rs}")
+            print(f"Cursors: {pos_1, pos_2}\n")
+
+        return rs
+
+
+    def sort_in_n_space(self, numbers):
         rs = [None] * len(numbers)
         pos_1 = 0
         quantity_2 = 0
