@@ -35,6 +35,12 @@ aq = qaq.ArrayQuestions  # Reassign the alias to refresh the reference
 
 102) Given a linked list of numbers with only 3 unique numbers (1, 2, 3), sort the list in O(n) time and only use constant space.
 
+103) Given a singly-linked list, reverse the list. This can be done iteratively or recursively. Can you get both solutions?  `[Google]`
+
+104) Convert a list to a doubly linked list.
+
+105) Reverse a singly linked list into a doubly linked list.
+
 
 ### Strings
 201) Given a string, s, find the longest palindromic substring in s. `[Twitter]`

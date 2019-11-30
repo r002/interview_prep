@@ -4,6 +4,9 @@ from arrays.q003 import *
 from arrays.q004 import *
 from algos.q101 import *
 from algos.q102 import *
+from algos.q103 import *
+from algos.q104 import *
+from algos.q105 import *
 from strings.q201 import *
 from strings.q202 import *
 from strings.q203 import *
@@ -19,6 +22,9 @@ options = { 1 : Arr001,
             4 : Arr004,
             101 : Algo101,
             102 : Algo102,
+            103 : Algo103,
+            104 : Algo104,
+            105 : Algo105,
             201 : Str201,
             202 : Str202,
             203 : Str203,
@@ -31,6 +37,9 @@ d = { "Arr001_desc" : Arr001.description,
       "Arr004_desc" : Arr004.description,
       "Algo101_desc" : Algo101.description,
       "Algo102_desc" : Algo102.description,
+      "Algo103_desc" : Algo103.description,
+      "Algo104_desc" : Algo104.description,
+      "Algo105_desc" : Algo105.description,
       "Str201_desc" : Str201.description,
       "Str202_desc" : Str202.description,
       "Str203_desc" : Str203.description
@@ -55,6 +64,9 @@ Array Questions:
 Algo Questions:
 {Algo101_desc}
 {Algo102_desc}
+{Algo103_desc}
+{Algo104_desc}
+{Algo105_desc}
 
 String Questions:
 {Str201_desc}
