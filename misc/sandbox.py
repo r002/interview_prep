@@ -1,3 +1,11 @@
+greetings = "Hello there!"
+
+s = f"""
+Greeting message: {greetings}
+"""
+print(s)
+
+
 # def test_append(foo):
 #     bar = foo
 #     bar.append(999)
