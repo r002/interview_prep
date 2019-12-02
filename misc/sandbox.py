@@ -1,10 +1,30 @@
-greetings = "Hello there!"
+# import arrays.q001               # This works
+# print(q001.Arr001.description)
 
+# from arrays.q001 import *        # This also works
+# print(Arr001.description)
+
+
+greetings = "Hello there!"
 s = f"""
 Greeting message: {greetings}
 """
 print(s)
 
+ll = [1, 2, 3, 4, 5]
+s = "".join(map(str, ll))
+print(s)
+print()
+
+## Lambda Functions
+##
+l = map(lambda x : x*2, ll)
+print(list(l))
+print()
+
+add = lambda x, y : x + y
+print(add(2, 3))
+print()
 
 # def test_append(foo):
 #     bar = foo

@@ -21,6 +21,7 @@ options = { 1 : q001.Arr001,
             2 : q002.Arr002,
             3 : q003.Arr003,
             4 : q004.Arr004,
+            5 : q005.Arr005,
             101 : q101.Algo101,
             102 : q102.Algo102,
             103 : q103.Algo103,
@@ -48,6 +49,7 @@ Array Questions:
 {q002.Arr002.description}
 {q003.Arr003.description}
 {q004.Arr004.description}
+{q005.Arr005.description}
 
 Algo Questions:
 {q101.Algo101.description}

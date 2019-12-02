@@ -29,6 +29,8 @@ aq = qaq.ArrayQuestions  # Reassign the alias to refresh the reference
 
 004) Given a list of numbers with only 3 unique numbers (1, 2, 3), sort the list in O(n) time. Bonus: Use constant space. `[Google]`
 
+005) You are given an array of integers in an arbitrary order. Return whether or not it is possible to make the array non-decreasing by modifying at most 1 element to any value. We define an array is non-decreasing if array[i] <= array[i + 1] holds for every i (1 <= i < n). `[Microsoft]`
+
 
 ### Algorithms
 101) Print the first ten numbers in the Fibonocci Sequence.
