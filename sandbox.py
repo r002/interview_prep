@@ -1,2 +1,7 @@
+count = 1
+
 def hello_world():
-    print("Hello Universe!")
+    print(f"Hello Universe! {count}")
+
+
+hello_world()
