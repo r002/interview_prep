@@ -10,9 +10,9 @@ class Solution:
             else:
                 ordered_dict[letter] = [index]
 
-        for key, val in ordered_dict.items():
-            if len(ordered_dict[key])==1:
-                return ordered_dict[key][0]  # Return the index
+        for val in ordered_dict.values():
+            if len(val)==1:
+                return val[0]  # Return the index
 
         return -1
 
