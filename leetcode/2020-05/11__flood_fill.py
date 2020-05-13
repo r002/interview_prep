@@ -1,5 +1,7 @@
 import unittest
 
+# Source: https://leetcode.com/problems/flood-fill
+
 class Solution:
     def __init__(self):
         self.oldColor = None
@@ -7,11 +9,10 @@ class Solution:
         self.image = None
 
     def floodFill(self, image:list, sr:int, sc:int, newColor:int) -> list:
-        # Print original
-        print("Original:")
-        for row in image:
-            print(row)
-        print("---")
+        # print("Original:")
+        # for row in image:
+        #     print(row)
+        # print("---")
 
         self.oldColor = image[sr][sc]
         self.newColor = newColor
@@ -25,9 +26,9 @@ class Solution:
         else:
             self.fillRecursive(sr, sc)
 
-        print("New:")
-        for row in self.image:
-            print(row)
+        # print("New:")
+        # for row in self.image:
+        #     print(row)
 
         return self.image
 
