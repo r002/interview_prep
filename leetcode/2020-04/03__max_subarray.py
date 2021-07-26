@@ -8,6 +8,24 @@ import unittest
 # https://en.wikipedia.org/wiki/Maximum_subarray_problem
 
 class Solution:
+
+    # # This implementation doesn't work; trying to not use Kadane's algo.
+    # def maxSubArray2(self, nums:list) -> int:
+    #     best_sum = nums[0]
+    #     for i in range(1, len(nums)):
+    #         print(f"best_sum: {best_sum}")
+    #         if nums[i] > 0:             # This number increases subarr sum.
+    #             if nums[i] > best_sum:
+    #                 best_sum = nums[i]
+    #             else:
+    #                 best_sum += nums[i]
+    #         else:
+    #             if nums[i] > best_sum:
+    #                 best_sum = nums[i]
+
+    #     return best_sum
+
+    # This implementation works.
     def maxSubArray(self, nums:list) -> int:
         zero_is_possible = False
 
