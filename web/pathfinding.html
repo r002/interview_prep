@@ -14,23 +14,40 @@
         width: min-content;
       }
 
-      input {
+      /* input {
         width: 20px;
         height: 20px;
-      }
-
-      /* .box {
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-        font-size: 16;
-        background-color: palegoldenrod;
       } */
 
-      .axisLabel {
+      .square {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        font-size: 14px;
+        justify-content: center;
+        align-items:center;
+        background-color: palegoldenrod;
+        margin: 2px;
+        border: 1px solid black;
+      }
+
+      .square-checked {
+        background-color: aquamarine;
+      }
+
+      .square-disabled {
+        background-color: grey;
+      }
+
+      .square-start {
+        background-color: green;
+      }
+
+      /* .axisLabel {
         text-align: center;
         font-size: 12px;
-      }
+      } */
     </style>
   </head>
   <body style="margin: 20px;">
@@ -38,34 +55,36 @@
     </div>
   </body>
   <script>
-    // Create labels for axes
-    for (let i=0; i<10; i++) {
-      const l = document.createElement('div')
-      l.className = 'axisLabel'
-      l.innerHTML = i
-      document.getElementById("map").append(l)
-    }
+    // // Create labels for axes
+    // for (let i=0; i<10; i++) {
+    //   const l = document.createElement('div')
+    //   l.className = 'axisLabel'
+    //   l.innerHTML = i
+    //   document.getElementById("map").append(l)
+    // }
 
     // Create map
     for (let i = 0; i < 100; i++) {
-      const cb = document.createElement('input')
-      cb.type = "checkbox"
-      // checkbox.name = "name";
-      // checkbox.value = "value";
+      const cb = document.createElement('div')
+      cb.className = 'square'
+      cb.onclick = handleClick
+      cb.innerHTML = i
       cb.id = `cb${i}`
       document.getElementById("map").append(cb)
     }
 
     // // Check top row
     // for (let i=0; i<50; i++) {
-    //   disableBox(i)
+    //   disableSquare(i)
     // }
 
     // // Check first column, first row (0,0)
     // const pos = 0*50 + 0
-    // checkBox(pos)
+    // checkSquare(pos)
 
     start(0)
+    setStart(0)
+    
 
     ////////////////////////////////
 
@@ -74,11 +93,11 @@
       const reached = new Set()
       frontier.push(startPoint) // Start point
       reached.add(startPoint)
-      checkBox(startPoint)
+      checkSquare(startPoint)
 
       while (frontier.length > 0) {
         const current = frontier.shift()
-        checkBox(current)
+        checkSquare(current)
         const neighbors = getNeighbors(current)
         console.log('>> neighbors:', current, neighbors)
         for (const point of neighbors) {
@@ -112,12 +131,21 @@
       return neighbors
     }
 
-    function checkBox (pos) {
-      document.getElementById(`cb${pos}`).checked = true
+    function handleClick (event) {
+      const el = event.target
+      el.classList.toggle('square-checked')
     }
 
-    function disableBox (pos) {
-      document.getElementById(`cb${pos}`).disabled = true
+    function checkSquare (pos) {
+      document.getElementById(`cb${pos}`).classList.toggle('square-checked')
+    }
+
+    function disableSquare (pos) {
+      document.getElementById(`cb${pos}`).classList.toggle('square-disabled')
+    }
+
+    function setStart (pos) {
+      document.getElementById(`cb${pos}`).classList.toggle('square-start')
     }
 
   </script>
