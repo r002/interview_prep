@@ -6,7 +6,8 @@ Questions are from https://www.byte-by-byte.com/blog/ and Daily Interview Pro em
 ## Runner
 To run:
 ```
-C:\code\interview_prep>python -m runner
+C:\code\interview_prep> python -m runner
+C:\code\interview_prep> light-server -s . -p 7000 -w "web/*"
 ```
 
 
