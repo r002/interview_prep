@@ -40,8 +40,16 @@
         background-color: grey;
       }
 
+      .square-traveled {
+        background-color: orange;
+      }
+
       .square-start {
         background-color: green;
+      }
+
+      .square-finish {
+        background-color: pink;
       }
 
       /* .axisLabel {
@@ -82,32 +90,58 @@
     // const pos = 0*50 + 0
     // checkSquare(pos)
 
-    start(0)
-    setStart(0)
-    
+    const frontier = []
+    const reached = new Map()
+    const startPos = 27
+    const finishPos = 75
+
+    setStart(startPos)
+    setFinish(finishPos)
+
+    runMain(startPos, finishPos)
 
     ////////////////////////////////
 
-    function start (startPoint) {
-      const frontier = []
-      const reached = new Set()
-      frontier.push(startPoint) // Start point
-      reached.add(startPoint)
-      checkSquare(startPoint)
+    function runMain (startPos, finishPos) {
+      exploreMap(startPos, finishPos)
+      traversePath(startPos, finishPos)
+      // // Iterate through 'reached'
+      // console.log(`\n>> Show traversal:`)
+      // reached.forEach((key, val) => console.log(`\t>> ${val} from ${key}`))
+    }
+
+    function traversePath (startPos, finishPos) {
+      let current = finishPos
+      while (current !== startPos) {
+        setTraveled(current)
+        current = reached.get(current)
+      }
+    }
+
+    function exploreMap (startPos, finishPos) {
+      frontier.push(startPos) // Start point
+      reached.set(startPos, null)
+      checkSquare(startPos)
 
       while (frontier.length > 0) {
         const current = frontier.shift()
         checkSquare(current)
+
+        if (current === finishPos) {
+          console.log(`\t>> Finish position reached! ${startPos} => ${finishPos}`)
+          break
+        }
+
         const neighbors = getNeighbors(current)
         console.log('>> neighbors:', current, neighbors)
         for (const point of neighbors) {
           if (!reached.has(point)) {
             frontier.push(point)
-            reached.add(point)
+            reached.set(point, current)
           }
         }
       }
-      console.log('>> pathfinding finished!!!')
+      console.log('>> map exploration finished!')
     }
 
     function getNeighbors (pos) {
@@ -146,6 +180,22 @@
 
     function setStart (pos) {
       document.getElementById(`cb${pos}`).classList.toggle('square-start')
+    }
+
+    function setFinish (pos) {
+      document.getElementById(`cb${pos}`).classList.toggle('square-finish')
+    }
+
+    function setTraveled (pos) {
+      document.getElementById(`cb${pos}`).classList.toggle('square-traveled')
+    }
+
+    /**
+    * Delay for a number of milliseconds
+    */
+    function sleep(delay) {
+        var start = new Date().getTime();
+        while (new Date().getTime() < start + delay);
     }
 
   </script>
